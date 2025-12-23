@@ -75,24 +75,25 @@ def preprocess_frame(frame):
     return frame_equalized
 
 #Acts as the database for matching
-dic_ref = {"Alen": [preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\AlenPicture.jpg"),
-                    preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\AlenPicture2.jpg")],
+#Observe, hid names, and path
+dic_ref = {"Name1": [preprocess_image(".jpg"),
+                    preprocess_image(".jpg")],
 
-            "Emil": [preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\emilPicture1.jpg")],
+            "Name2": [preprocess_image(".jpg")],
 
-            "Amel": [preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\baboPicture1.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\baboPicture2.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\baboPicture3.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\baboPicture4.jpg")],
+            "Name3": [preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg")],
                      
-            "Mevlida": [preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture1.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture2.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture3.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture4.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture5.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture6.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture7.jpg"),
-                     preprocess_image("C:\\Users\\AlenC\\OneDrive\\Skrivbord\\Learning\\MachineLearning\\Python\\FaceRecognition\\mamaPicture8.jpg")]} 
+            "Name4": [preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg"),
+                     preprocess_image(".jpg")]} 
 
 
 
@@ -170,3 +171,4 @@ while True:
 
 #This is used to close all the windows from OpenCV effectively ending the code
 cv2.destroyAllWindows()
+
