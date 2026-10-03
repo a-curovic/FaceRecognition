@@ -1,37 +1,48 @@
-# FaceRecognition
-Overview
+# Face Verification with OpenCV and DeepFace
 
-This project is a face recognition system that uses DeepFace for facial verification and OpenCV for video capture and display. It continuously scans faces from a webcam feed and compares them to reference images stored locally, identifying users in real-time.
+This is a small computer vision project I built to practice working with face recognition models and real-time webcam input.
 
-Features:
--Real-time face recognition
--Multi-threaded face verification
--Automatic downloading of required face recognition models if not already present
--Adjustable reference image database
+The program captures frames from a webcam and compares the detected face against previously provided reference images. It then returns a verification result based on the comparison.
 
-Requirements;
-  Libraries:
-    -cv2 (OpenCV): Handles video capture and image processing.
-    -deepface: Performs face recognition tasks.
-    -threading: Manages simultaneous processes.
-    -os: Handles system operations.
+## How it works
 
-Installation:
-pip install opencv-python deepface
+At a high level, the workflow is:
 
-How to Use:
-  Set Up Reference Images:
-    -Add reference images in the designated paths within the dic_ref dictionary in the code.
+Webcam frame → face detection / processing → comparison with reference image → verification result
 
-How It Works:
-  Model Preparation:
-    Checks if required DeepFace models (VGG-Face, Facenet, OpenFace) are downloaded.
-    Automatically downloads missing models.
+The project uses pretrained face-recognition functionality rather than training a facial-recognition model from scratch.
 
-  Face Verification Process:
-    -Captures video frames from the webcam.
-    -Every 30 frames, starts a verification thread.
-    -Compares captured frames against reference images.
-    -Displays match results in real-time.
-  Error Handling:
-    -Catches and logs any face verification errors.
+## Technologies
+
+- Python
+- OpenCV
+- DeepFace
+
+## Purpose
+
+I built this project mainly as personal practice.
+
+My goal was to understand how an existing computer vision model could be integrated into a small application and how changes to the comparison process affected whether a face was successfully recognised.
+
+## Limitations
+
+This is an experimental learning project and should not be treated as a production biometric system.
+
+The current implementation has several limitations:
+
+- Verification accuracy is not reliable enough for security-sensitive use.
+- Results can depend on the quality of the reference image.
+- Lighting, camera position, facial angle, and other image conditions can affect the result.
+- The project has not been evaluated on a large or representative dataset.
+
+Reference photographs are intentionally not included in the public repository.
+
+## Running the project
+
+The project is intended to run locally with a webcam and one or more reference images.
+
+Exact installation and execution instructions will be added after the repository dependencies and entry point are verified.
+
+## Future work
+
+I may return to the project to improve the verification process, evaluate it more systematically, and make the handling of reference images and webcam input more robust.
